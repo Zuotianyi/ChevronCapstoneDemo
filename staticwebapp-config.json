@@ -1,13 +1,13 @@
 {
     "routes": [
       {
-        "route": "/.well-known/did.json",
-        "rewrite": "/well-known/did.json"
+        "route": "/.well-known/*",
+        "serve": "/.well-known/{*}"
       }
     ],
     "navigationFallback": {
       "rewrite": "/index.html",
-      "exclude": ["/well-known/*"]
+      "exclude": ["/.well-known/*"]
     }
   }
   
